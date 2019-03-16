@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pet Park</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto|Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../public/assets/css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../../public/assets/js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="banner">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="logo">
+                    <h1 class="pl-4 pt-4" style="z-index: 5"> Pet Park</h1>
+                    <h1 class="pl-4 pt-4" style="color:#F5A623; position:absolute; top: 4px; left: 8px;"> Pet Park
+                    </h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="justify-content-end collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <div class="pr-4">
+                        <button class="btn btn-danger my-2 my-sm-0 mx-2" id="create">Create A Pet</button>
+                        <button class="btn btn-warning my-2 my-sm-0 mx-2">Log In</button>
+                        <button class="btn btn-warning my-2 my-sm-0 mx-2">Sign Up</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container-fluid mt-5">
+        <div class="cards">
+            <article data-id="1">
+                <img src="../../public/assets/img/gif/spinCat.gif">
+            </article>
+            <article data-id="2">
+                <img src="../../public/assets/img/gif/angryCat.gif">
+            </article>
+            <article data-id="3">
+                <img src="../../public/assets/img/gif/danceCat.gif">
+            </article>
+            <article>
+                <img src="../../public/assets/img/gif/jumpyBunny.gif">
+            </article>
+            <article>
+                <img src="../../public/assets/img/gif/toothPlant.gif">
+            </article>
+            <article>
+                <img src="../../public/assets/img/gif/swordWolf.gif">
+            </article>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+        id="petStatus">
+        <div class="modal-dialog modal-dialog-centered .modal-lg" role="document">
+            <div class="modal-content p-2">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalCenterTitle"><b>Bearer</b> | Owener: Jack</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center justify-content-around">
+                        <div class="col-md-2 p-0">
+                            <h5 class="align-self-end py-0 my-0 text-right">H.P.</h5>
+                        </div>
+                        <div class="col-md-7 p-0">
+                            <div class="progress" style="height: 30px;">
+                                <div id="hpBar" class="progress-bar bg-danger" role="progressbar" style="width: 33%;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 p-0">
+                            <button class="btn btn-danger py-0 action" style="width:70px; height: 30px;">Kill</button>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-around my-2">
+                        <div class="col-md-2 p-0">
+                            <h5 class="align-self-end py-0 my-0 text-right">Hungry</h5>
+                        </div>
+                        <div class="col-md-7 p-0">
+                            <div class="progress" style="height: 30px;">
+                                <div id="hungryBar" class="progress-bar progress-bar-striped bg-success"
+                                    role="progressbar" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 p-0">
+                            <button class="btn btn-warning py-0 action" style="width:70px; height: 30px;">Feed</button>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-around my-2">
+                        <div class="col-md-2 p-0">
+                            <h5 class="align-self-end py-0 my-0 text-right">Sleepy</h5>
+                        </div>
+                        <div class="col-md-7 p-0">
+                            <div class="progress" style="height: 30px;">
+                                <div id="sleepyBar" class="progress-bar progress-bar-striped bg-success"
+                                    role="progressbar" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 p-0">
+                            <button class="btn btn-warning py-0 action" style="width:70px; height: 30px;">Sleep</button>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-around my-2">
+                        <div class="col-md-2 p-0">
+                            <h5 class="align-self-end py-0 my-0 text-right">Happy</h5>
+                        </div>
+                        <div class="col-md-7 p-0">
+                            <div class="progress" style="height: 30px;">
+                                <div id="happyBar" class="progress-bar progress-bar-striped bg-success"
+                                    role="progressbar" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 p-0">
+                            <button class="btn btn-warning py-0 action" style="width:70px; height: 30px;">Play</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</html>

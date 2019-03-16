@@ -1,0 +1,126 @@
+body{
+    background-color: #86B41A;
+}
+.container-fluid{
+    background-image: url("../img/trees.png");
+    background-repeat: repeat-y;
+    background-position: center top
+}
+.banner{
+    background-image: url("../img/banner2.png");
+    height: 200px;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: left
+}
+
+.bg-light{
+    background-color: transparent!important
+}
+
+h1{
+    font-size: 42pt;
+    font-family: 'Luckiest Guy', cursive;
+    color: white
+}
+
+h2{
+    font-size: 42pt;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h3{
+    font-size: 31pt;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h6{
+    font-size: 20pt;
+    font-family: 'Just Me Again Down Here', cursive;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 30px;
+    max-width: 1040px;
+    margin: 0 auto 30px;
+    margin-top: 20px;
+}
+
+.cards-createNewPet{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 160px));
+    grid-gap: 15px;
+    max-width: 100%;
+    margin: 0 auto 20px;
+    margin-top: 10px;
+}
+
+article {
+    position: relative;
+}
+
+img{
+    width: 100%
+}
+
+.selectPetBox{
+    display: grid;
+    border: 3px solid black;
+    border-radius: 27px;
+    width: 100%
+}
+
+.selectedPetBox{
+    border: 5px solid red
+}
+
+
+.speech-bubble {
+	position: relative;
+	background: #ebebeb;
+	border-radius: .4em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 0.688em solid transparent;
+	border-right-color: #ebebeb;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -0.344em;
+	margin-left: -0.687em;
+}
+
+button{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#aliveInfo{
+    display: none
+}
+
+#resurrectInfo{
+    display: none
+}
+
+#thunder{
+    position: absolute;
+    top: -100px
+}
+
+#logoutBtn{
+    display: none;
+}
+
+#errorSelectPet{
+    color: red;
+    font-size: 18px; 
+    font-family: 'Roboto Condensed', sans-serif;
+}
